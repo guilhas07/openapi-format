@@ -1,5 +1,4 @@
 const fs = require('fs');
-const sy = require('@stoplight/yaml');
 const {exec} = require('child_process');
 const path = require('path');
 const {parseFile, stringify} = require('../../utils/file');
