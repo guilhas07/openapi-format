@@ -128,8 +128,9 @@ describe('openapi-format tests', () => {
 
         try {
           if (!readOutput) {
-            // Write OpenAPI string to file
-            await writeFile(outputFilename, result, options);
+            // result is already a formatted string from run() — write it directly
+            // rather than passing through writeFile, which would double-serialize it
+            fs.writeFileSync(outputFilename, result, 'utf8');
           }
         } catch (error) {
           console.error('error', error);
