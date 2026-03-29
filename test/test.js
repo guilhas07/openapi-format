@@ -57,8 +57,7 @@ describe('openapi-format tests', () => {
             configFileOptions.sort = !configFileOptions['no-sort'];
             delete configFileOptions['no-sort'];
           }
-          configFileOptions.bundle = !configFileOptions['no-bundle'];
-          if (configFileOptions['no-sort'] && configFileOptions['no-bundle'] === true) {
+          if (configFileOptions['no-bundle'] !== undefined) {
             configFileOptions.bundle = !configFileOptions['no-bundle'];
             delete configFileOptions['no-bundle'];
           }
